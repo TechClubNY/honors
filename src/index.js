@@ -88,7 +88,7 @@ if(tcpjid){
 
 
           if(sitedata.contributors && sitedata.contributors.length){
-              sitedata.contributors.reverse().forEach(contributor=>{
+              sitedata.contributors.forEach(contributor=>{
                   let author = contributor;
 
                     let node = document.createElement('li');
