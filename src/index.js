@@ -33,7 +33,7 @@ let contributors = h('ul', { className: 'tch_contributors'} );
 
 //mount
 if(mountid){
-    mount(wrapper, 'footer')
+    mount(wrapper, mountid)
 }
 
 //detail section
