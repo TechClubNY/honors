@@ -54,27 +54,8 @@
 
       <hr>
 
-      <footer>
-        <div class="credit" >
-          <span id="tc_credit_show_popup">Made with <i>♥</i> by TechClub</span>
-        </div>
+      <footer id="footer">
       </footer>
-    </div>
-    <div class="popup" id="tc_credit_popup">
-      <div class="overlay"></div>
-      <div class="watermark">
-        </div>
-      <div class="content">
-
-        <h4>Information</h4>
-        <p>Site: <span>techclub.nyc<span></p>
-        <p>Description: <span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<span></p>
-        <h4>Contributors</h4>
-        <ul class="contributors" id="contributors"></ul>
-        <div class="footer">
-          <span class="button" id="btn_hide_tc_credit">Thanks</span>
-        </div>
-      </div>
     </div>
 
 
@@ -83,41 +64,7 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="bundle.js"></script>
-
-        <script>
-          fetch('https://api.github.com/repos/TechClubNY/techclub-site/stats/contributors').then( res => res.json() )
-            .then( data => {
-
-              let contributorsList = document.getElementById('contributors')
-
-              data.reverse().forEach( contributor => {
-                let author = contributor.author;
-
-                let node = document.createElement('li');
-                let img = document.createElement('img');
-
-                img.src = author.avatar_url;
-                node.appendChild(img);
-                contributorsList.appendChild(node);
-              })
-
-            })
-
-            let btnhide = document.getElementById('btn_hide_tc_credit');
-            let btncredit = document.getElementById('tc_credit_show_popup');
-            let overlay = document.getElementById('tc_credit_popup');
-
-            btnhide.addEventListener('click', e=>{
-              overlay.style.display = 'none';
-              overlay.style.opacity = 0;
-            })
-
-            btncredit.addEventListener('click', e=>{
-              overlay.style.display = 'flex';
-              overlay.style.opacity = 1;
-            })
-        </script>
+        <script src="bundle.js" data-pjid="1" data-mountid="footer"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

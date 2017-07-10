@@ -10,5 +10,5 @@ export default {
       exclude: 'node_modules/**' // only transpile our source code
     })
   ],
-  dest: 'dist/bundle.js'
+  dest: 'docs/bundle.js'
 };
