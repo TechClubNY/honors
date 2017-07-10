@@ -85,5 +85,19 @@ if(tcpjid){
               }
             })
           }
+
+
+          if(sitedata.contributors && sitedata.contributors.length){
+              sitedata.contributors.reverse().forEach(contributor=>{
+                  let author = contributor;
+
+                    let node = document.createElement('li');
+                    let img = document.createElement('img');
+
+                    img.src = author.avatar_url;
+                    node.appendChild(img);
+                    contributors.appendChild(node);
+              })
+          }
         })
 }
