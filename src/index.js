@@ -71,21 +71,20 @@ if(tcpjid){
           if(sitedata.github){
             fetch(`https://api.github.com/repos/${sitedata.github.org}/${sitedata.github.repo}/stats/contributors`).then( res => res.json() )
             .then( data => {
+              if(data && data.length){
+                  data.reverse().forEach( contributor => {
+                    let author = contributor.author;
 
-              data.reverse().forEach( contributor => {
-                let author = contributor.author;
+                    let node = document.createElement('li');
+                    let img = document.createElement('img');
 
-                let node = document.createElement('li');
-                let img = document.createElement('img');
-
-                img.src = author.avatar_url;
-                node.appendChild(img);
-                contributors.appendChild(node);
-              })
-
+                    img.src = author.avatar_url;
+                    node.appendChild(img);
+                    contributors.appendChild(node);
+                  })
+              }
             })
           }
 
         })
-
 }

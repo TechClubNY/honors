@@ -104,17 +104,18 @@ if (tcpjid) {
             fetch('https://api.github.com/repos/' + sitedata.github.org + '/' + sitedata.github.repo + '/stats/contributors').then(function (res) {
                 return res.json();
             }).then(function (data) {
+                if (data && data.length) {
+                    data.reverse().forEach(function (contributor) {
+                        var author = contributor.author;
 
-                data.reverse().forEach(function (contributor) {
-                    var author = contributor.author;
+                        var node = document.createElement('li');
+                        var img = document.createElement('img');
 
-                    var node = document.createElement('li');
-                    var img = document.createElement('img');
-
-                    img.src = author.avatar_url;
-                    node.appendChild(img);
-                    contributors.appendChild(node);
-                });
+                        img.src = author.avatar_url;
+                        node.appendChild(img);
+                        contributors.appendChild(node);
+                    });
+                }
             });
         }
     });

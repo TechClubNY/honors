@@ -126,7 +126,7 @@
   transition: all .3s;
 }
 
-.tch_content .footer span.tch_button:hover {
+.tch_content .tch_footer span.tch_button:hover {
   color: #fff;
   background-color: #007aff;
 }
