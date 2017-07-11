@@ -1,0 +1,26 @@
+{
+    "site": "A Stronger Tomorrow",
+    "description": "making free college possible",
+    "contributors": [
+        {
+            "name": "Charie",
+            "avatar_url": "http://web.techclub.nyc/assets/img/team/charlie-1.jpg"
+        },
+        {
+            "name": "Navid",
+            "avatar_url": "http://web.techclub.nyc/assets/img/team/navid-1.jpg"
+        },
+        {
+            "name": "Carlos",
+            "avatar_url": "http://web.techclub.nyc/assets/img/team/carlos-1.jpg"
+        },
+        {
+            "name": "Zifang",
+            "avatar_url": "http://web.techclub.nyc/assets/img/team/zifang-1.jpg"
+        },
+        {
+            "name": "Victor",
+            "avatar_url": "http://web.techclub.nyc/assets/img/team/victor-1.jpg"
+        }
+    ]
+}
