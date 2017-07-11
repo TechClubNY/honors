@@ -13,6 +13,8 @@ class Honors extends React.Component {
     }
 
     render(){
+
+        return (
         <div>
             <Credit onClick={ ()=>this.setState({showPopup: true}) }/>
             <Popup
@@ -20,6 +22,7 @@ class Honors extends React.Component {
                 onClick={ ()=>this.setState({showPopup: false}) }
                 />
         </div>
+        )
     }
 }
 
