@@ -1,0 +1,145 @@
+.tch_credit {
+  font-family: 'Helvetica Neue' !important;
+  font-weight: 300;
+}
+
+.tch_credit span {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.tch_credit span i {
+  font-style: normal;
+  color: #ccc;
+  transition: all .5s;
+}
+
+.tch_credit span:hover {
+  border-bottom: 1px solid #ccc;
+}
+
+.tch_credit span:hover i {
+  color: #ff7160;
+}
+
+.tch_popup {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s;
+  z-index: 9999999;
+  position: fixed;
+}
+
+.tch_overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.5);
+  overflow: hidden;
+  z-index: 5;
+}
+
+.tch_content {
+  width: 500px;
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-family: 'Helvetica Neue' !important;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+@media(max-width: 600px){
+  .tch_content {
+    margin: auto 15px;
+  }
+}
+
+.tch_content h4 {
+  font-family: 'Helvetica Neue' !important;
+  font-weight: 300;
+  font-size: 28px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  color: #007aff;
+}
+
+.tch_content p {
+  margin: 10px 0;
+}
+
+.tch_content p span {
+  color: #464646;
+  font-size: 15px;
+}
+
+.tch_content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tch_content ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.tch_content ul li img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  padding: 3px;
+  transition: border .3s;
+}
+
+.tch_content ul li:hover img {
+  border: 2px solid #6fd2ef;
+}
+
+.tch_content .tch_footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  /* border-top: 1px solid #d4d4d4; */
+  margin: auto -30px;
+  width: 100%;
+  text-align: center;
+}
+
+.tch_content .tch_footer span.tch_button {
+  color: #007aff;
+  border: 1px solid #007aff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.tch_content .tch_footer span.tch_button:hover {
+  color: #fff;
+  background-color: #007aff;
+}
+
+.tch_watermark {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 6;
+  background: url(http://web.techclub.nyc/assets/img/logo-white.png);
+  background-size: cover;
+}

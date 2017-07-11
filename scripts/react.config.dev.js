@@ -3,6 +3,7 @@ import cjs from 'rollup-plugin-commonjs';
 import globals from 'rollup-plugin-node-globals';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   dest: 'lib/index.js',
@@ -10,6 +11,15 @@ export default {
   format: 'cjs',
   moduleName: 'techclub-honors',
   plugins: [
+    postcss({
+      plugins: [
+        cssnano()
+      ],
+      //sourceMap: false, // default value
+      //extract: false, // default value
+      extensions: ['.css', '.sss']  // default value
+      // parser: sugarss
+    }),
     babel({
       babelrc: false,
       exclude: 'node_modules/**',

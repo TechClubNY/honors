@@ -1,4 +1,6 @@
 import { h, mount } from './dom';
+import styles from './honor.css';
+
 function getSyncScriptParams() {
      var scripts = document.getElementsByTagName('script');
      var lastScript = scripts[scripts.length-1];
@@ -13,11 +15,11 @@ function getSyncScriptParams() {
 const { tcpjid, mountid } = getSyncScriptParams();
 
 //styleshhet
-let style = h('link');
-style.type='text/css';
-style.rel="stylesheet";
-style.href='https://techclubny.github.io/honors/css/honor.min.css';
-document.head.appendChild(style)
+// let style = h('link');
+// style.type='text/css';
+// style.rel="stylesheet";
+// style.href='https://techclubny.github.io/honors/css/honor.min.css';
+// document.head.appendChild(style)
 
 
 //credit section
