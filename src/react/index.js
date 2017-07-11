@@ -23,7 +23,8 @@ class Honors extends React.Component {
                 fetch(`https://api.github.com/repos/${sitedata.github.org}/${sitedata.github.repo}/stats/contributors`).then( res => res.json() )
                 .then( data => {
                   if(data && data.length){
-                      this.setState({ contributors: this.state.contributors.concat(data.reverse())})
+                      let list = data.reverse().map( item=>item.author)
+                      this.setState({ contributors: this.state.contributors.concat(list)})
                   }
                 })
             }
