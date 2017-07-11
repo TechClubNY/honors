@@ -7,7 +7,7 @@ const Popup  = props => (
     <div className="tch_popup" style={{display: props.show ? 'flex' : 'none', opacity: props.show ? 1 : 0}}>
         <Overlay />
         <Watermark />
-        <div className="content">
+        <div className="tch_content">
             <h4>Information</h4>
             <p>Site: <span>{ props.site }</span></p>
             <p>Description: <span>{ props.description }</span></p>

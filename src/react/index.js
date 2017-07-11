@@ -19,7 +19,7 @@ class Honors extends React.Component {
             <Credit onClick={ ()=>this.setState({showPopup: true}) }/>
             <Popup
                 show={this.state.showPopup}
-                onClick={ ()=>this.setState({showPopup: false}) }
+                onClose={ ()=>this.setState({showPopup: false}) }
                 />
         </div>
         )
