@@ -40,5 +40,9 @@
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^4.0.0"
+  },
+  "dependencies": {
+    "es6-promise": "^4.1.1",
+    "isomorphic-fetch": "^2.2.1"
   }
 }
