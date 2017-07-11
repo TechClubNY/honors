@@ -17,7 +17,7 @@ class Honors extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`https://techclubny.github.io/honors/data/projects/${props.id}.json`).then( res => res.json() )
+        fetch(`https://techclubny.github.io/honors/data/projects/${this.props.id}.json`).then( res => res.json() )
         .then( sitedata => {
             if(sitedata.github){
                 fetch(`https://api.github.com/repos/${sitedata.github.org}/${sitedata.github.repo}/stats/contributors`).then( res => res.json() )
