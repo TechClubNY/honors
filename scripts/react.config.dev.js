@@ -4,6 +4,7 @@ import globals from 'rollup-plugin-node-globals';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
+import cssnano from 'cssnano';
 
 export default {
   dest: 'lib/index.js',
