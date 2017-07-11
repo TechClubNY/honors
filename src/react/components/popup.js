@@ -4,7 +4,7 @@ const Overlay = () => <div className="tch_overlay" />
 const Watermark = () => <div className="tch_watermark" />
 
 const Popup  = props => (
-    <div className="tch_popup" style={{display: props.show ? 'flex' : 'none'}}>
+    <div className="tch_popup" style={{display: props.show ? 'flex' : 'none', opacity: props.show ? 1 : 0}}>
         <Overlay />
         <Watermark />
         <div className="content">
