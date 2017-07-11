@@ -12,6 +12,7 @@ class Honors extends React.Component {
 
         this.state = {
             showPopup: false,
+            siteData: {},
             contributors: []
         }
     }
@@ -19,6 +20,9 @@ class Honors extends React.Component {
     componentDidMount(){
         fetch(`https://techclubny.github.io/honors/data/projects/${this.props.id}.json`).then( res => res.json() )
         .then( sitedata => {
+
+            this.setState({siteData: sitedata});
+
             if(sitedata.github){
                 fetch(`https://api.github.com/repos/${sitedata.github.org}/${sitedata.github.repo}/stats/contributors`).then( res => res.json() )
                 .then( data => {
@@ -41,6 +45,8 @@ class Honors extends React.Component {
         <div>
             <Credit onClick={ ()=>this.setState({showPopup: true}) }/>
             <Popup
+                site={this.state.siteData.site}
+                description={this.state.siteData.description}
                 show={this.state.showPopup}
                 onClose={ ()=>this.setState({showPopup: false}) }
                 contributors={this.state.contributors}

@@ -14,9 +14,9 @@ const Popup  = props => (
             <h4>Contributors</h4>
             <ul className="tch_contributors">
                 {
-                    props.contributors.map( contributor => {
+                    props.contributors.map( (contributor, i) => {
                         return (
-                            <li>
+                            <li key={i}>
                                 <img src={contributor.avatar_url} />
                             </li>
                         )
