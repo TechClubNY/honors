@@ -69,6 +69,7 @@ class Popup extends React.Component {
                         }
                     </ul>
                     <div className="tch_footer">
+                        <a className="tch_button" href="http://techclub.nyc" taret="_blank" >About TechClub</a>
                         <span className="tch_button" onClick={e=>onClose(e)}>Thanks</span>
                     </div>
                 </div>
