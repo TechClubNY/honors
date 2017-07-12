@@ -21,8 +21,8 @@ class Popup extends React.Component {
         let offset = this.refs.content.getBoundingClientRect();
         this.setState({
             showTooltip: true,
-            tooltipLeft: `${e.target.x - offset.left - e.target.width}px`,
-            tooltipTop: `${e.target.y - offset.top - e.target.height}px`,
+            tooltipLeft: `${e.target.offsetLeft - e.target.width}px`,
+            tooltipTop: `${e.target.offsetTop - e.target.height}px`,
             tooltipContent: <p>{ contributor.name || contributor.login }</p>
         })
     }

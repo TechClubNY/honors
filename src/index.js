@@ -97,8 +97,8 @@ if (tcpjid) {
                     el.addEventListener('mouseenter', e=>{
                       let offset = content.getBoundingClientRect();
                       tooltip.style.display = 'inherit';
-                      tooltip.style.left = `${e.target.x - offset.left - e.target.width}px`;
-                      tooltip.style.top =  `${e.target.y - offset.top - e.target.height}px`;
+                      tooltip.style.left = `${e.target.offsetLeft - e.target.width}px`;
+                      tooltip.style.top =  `${e.target.offsetTop - e.target.height}px`;
                       tooltip.innerHTML = html
                     })
 
