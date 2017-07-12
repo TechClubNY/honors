@@ -2,6 +2,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
+import autoprefixer from 'autoprefixer';
 
 export default {
   entry: 'src/index.js',
@@ -9,6 +10,7 @@ export default {
   plugins: [
     postcss({
       plugins: [
+        autoprefixer(),
         cssnano()
       ],
       //sourceMap: false, // default value

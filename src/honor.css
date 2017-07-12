@@ -46,6 +46,7 @@
   background-color: rgba(0,0,0, 0.5);
   overflow: hidden;
   z-index: 5;
+  animation: tch_fadein 1s;
 }
 
 .tch_content {
@@ -58,6 +59,7 @@
   font-weight: 300;
   position: relative;
   padding-bottom: 100px;
+  animation: tch_fadeindown 1s;
 }
 
 @media(max-width: 600px){
@@ -74,10 +76,14 @@
   padding-bottom: 15px;
   margin-bottom: 0;
   color: #007aff;
+  animation: tch_fadeindown .5s;
+
 }
 
 .tch_content p {
   margin: 10px 0;
+  animation: tch_fadeindown .5s;
+
 }
 
 .tch_content p span {
@@ -88,6 +94,7 @@
 .tch_content ul {
   list-style: none;
   padding-left: 0;
+  animation: tch_fadeindown .5s;
 }
 
 .tch_content ul li {
@@ -119,18 +126,20 @@
   text-align: center;
 }
 
-.tch_content .tch_footer span.tch_button {
+.tch_content .tch_footer .tch_button {
   color: #007aff;
   border: 1px solid #007aff;
   padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
   transition: all .3s;
+  margin: auto 5px;
 }
 
-.tch_content .tch_footer span.tch_button:hover {
+.tch_content .tch_footer .tch_button:hover {
   color: #fff;
   background-color: #007aff;
+  text-decoration: none;
 }
 
 .tch_watermark {
@@ -142,4 +151,51 @@
   z-index: 6;
   background: url(http://web.techclub.nyc/assets/img/logo-white.png);
   background-size: cover;
+}
+
+.tch_content .tch_tooltip {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 12px -4px rgba(0,0,0,0.5);
+  border: 1px solid #6fd2ef;
+  animation: tch_fadeindown .3s;
+  display: none;
+  text-align: center;
+}
+
+.tch_tooltip::before, .tch_tooltip::after {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  width: 0;
+  height: 0;
+}
+.tch_tooltip::before {
+  bottom: -11px;
+  left: 89px;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 11px solid #6fd2ef;
+}
+.tch_tooltip::after {
+  bottom: -10px;
+  left: 90px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+@keyframes tch_fadeindown {
+    from { opacity: 0; transform: translate(0,-15px) }
+    to   { opacity: 1; transform: translate(0,0)}
+}
+
+
+@keyframes tch_fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

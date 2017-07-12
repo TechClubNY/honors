@@ -5,6 +5,7 @@ import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
+import autoprefixer from 'autoprefixer';
 
 export default {
   dest: 'lib/index.js',
@@ -14,6 +15,7 @@ export default {
   plugins: [
     postcss({
       plugins: [
+        autoprefixer(),
         cssnano()
       ],
       //sourceMap: false, // default value

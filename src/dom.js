@@ -9,6 +9,12 @@ export const h = (type, props, ...children) => {
 
     node.className = node._$props.className
 
+    //anchor
+    if(type === 'a'){
+      node.href = node._$props.href;
+      node.target = node._$props.target;
+    }
+
     if(children.length){
       children.forEach( child => {
         if(child instanceof Element){
