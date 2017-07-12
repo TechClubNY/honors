@@ -45,10 +45,10 @@ class Popup extends React.Component {
 
         return (
             <div className="tch_popup" style={{display: show ? 'flex' : 'none', opacity: show ? 1 : 0}}>
-                <Tooltip style={tooltipStyle}>{this.state.tooltipContent}</Tooltip>
                 <Overlay />
                 <Watermark />
                 <div className="tch_content" ref="content">
+                    <Tooltip style={tooltipStyle}>{this.state.tooltipContent}</Tooltip>
                     <h4>Information</h4>
                     <p>Site: <span>{ site }</span></p>
                     <p>Description: <span>{ description }</span></p>
