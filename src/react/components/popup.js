@@ -40,7 +40,7 @@ class Popup extends React.Component {
         const tooltipStyle = {
             display: this.state.showTooltip ? 'inherit': 'none',
             left: this.state.tooltipLeft,
-            tooltipTop: this.state.tooltipTop
+            top: this.state.tooltipTop
         }
 
         return (
