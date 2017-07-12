@@ -134,6 +134,7 @@
   cursor: pointer;
   transition: all .3s;
   margin: auto 5px;
+  font-size: 18px;
 }
 
 .tch_content .tch_footer .tch_button:hover {
